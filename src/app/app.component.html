@@ -1,1 +1,16 @@
+<h1>Advant of Code 2024</h1>
+
 <router-outlet />
+
+<ol style="margin-top: 2rem">
+  <li>
+    <a [routerLink]="['/']"> home </a>
+  </li>
+  @for(appRoute of appRoutes; track $index) {
+  <li>
+    <a [routerLink]="[appRoute]">
+      {{ appRoute }}
+    </a>
+  </li>
+  }
+</ol>
